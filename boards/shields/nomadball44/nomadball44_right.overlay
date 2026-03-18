@@ -3,6 +3,7 @@
 // instructions.
 
 #include "nomadball44.dtsi"
+#include <zephyr/dt-bindings/input/input-event-codes.h>
 
 &default_transform {
     // Set this to the number of columns on the left side.
@@ -16,4 +17,57 @@
         = <&xiao_d 0 GPIO_ACTIVE_HIGH>
         , <&xiao_d 0 GPIO_ACTIVE_HIGH>
         ;
+};
+
+&pinctrl {
+    spi0_default: spi0_default {
+        group1 {
+            /* NomadBall44: D0=SDIO, D1=SCLK (半二重: MOSI/MISO同一ピン) */
+            psels = <NRF_PSEL(SPIM_SCK, 0, 3)>,
+                    <NRF_PSEL(SPIM_MOSI, 0, 2)>,
+                    <NRF_PSEL(SPIM_MISO, 0, 2)>;
+        };
+    };
+    spi0_sleep: spi0_sleep {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 0, 3)>,
+                    <NRF_PSEL(SPIM_MOSI, 0, 2)>,
+                    <NRF_PSEL(SPIM_MISO, 0, 2)>;
+            low-power-enable;
+        };
+    };
+};
+
+&spi0 {
+    status = "okay";
+    compatible = "nordic,nrf-spim";
+    pinctrl-0 = <&spi0_default>;
+    pinctrl-1 = <&spi0_sleep>;
+    pinctrl-names = "default", "sleep";
+    cs-gpios = <&gpio0 28 GPIO_ACTIVE_LOW>;  /* D2 = P0.28 (nCS) */
+
+    trackball: trackball@0 {
+        status = "okay";
+        compatible = "pixart,pmw3610";
+        reg = <0>;
+        spi-max-frequency = <2000000>;
+        duplex = <2048>;  /* SPI_HALF_DUPLEX: SDIOでMOSI/MISO共有 */
+        irq-gpios = <&gpio0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;  /* D3 = P0.29 (MOTION) */
+        cpi = <600>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+        force-awake;
+        /* force-awake-4ms-mode; */  /* USB接続で250Hzが必要な場合 */
+        // swap-xy;   /* センサー向きに応じて */
+        // invert-x;
+        // invert-y;
+    };
+};
+
+/ {
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+    };
 };
