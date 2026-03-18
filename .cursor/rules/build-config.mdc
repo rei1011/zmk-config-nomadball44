@@ -1,0 +1,40 @@
+---
+description: ビルド設定はKconfig.defconfigを使用し、*.confファイルは利用しない
+globs: "**/*.conf,**/Kconfig*,**/boards/**"
+alwaysApply: false
+---
+
+# ビルド設定の規約
+
+ビルド設定には `*.conf` ファイルを利用せず、`Kconfig.defconfig` ファイルを使用してください。
+
+## 正しい方法
+
+```kconfig
+# boards/shields/<shield_name>/Kconfig.defconfig
+
+if SHIELD_<SHIELD_NAME>_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "keyboard_name"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+```
+
+## 避ける方法
+
+```conf
+# boards/shields/<shield_name>/*.conf は使用しない
+
+# CONFIG_EC11_TRIGGER_GLOBAL_THREAD=y
+# CONFIG_ZMK_DISPLAY=y
+```
+
+## 理由
+
+- `Kconfig.defconfig` は ZMK/Zephyr の標準的な設定方法
+- 条件分岐（`if SHIELD_xxx`）で適切にスコープを制御できる
+- 設定の一元管理がしやすい
