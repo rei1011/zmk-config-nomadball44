@@ -57,6 +57,20 @@
 };
 
 / {
+    sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&encoder_right>;
+        triggers-per-rotation = <24>;
+    };
+
+    encoder_right: encoder_right {
+        compatible = "alps,ec11";
+        a-gpios = <&gpio0 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        b-gpios = <&gpio0 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        steps = <24>;
+        status = "okay";
+    };
+
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
