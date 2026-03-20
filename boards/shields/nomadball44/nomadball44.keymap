@@ -1,1 +1,2 @@
+// boards/shields/nomadball44にkeymapファイルが無い場合、github actionsでビルドが通らない
 #include "../../../config/nomadball44.keymap"
