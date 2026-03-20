@@ -6,19 +6,6 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
-# PMW3610 trackball (right half only)
-config SPI
-    default y
-
-config INPUT
-    default y
-
-config ZMK_POINTING
-    default y
-
-config PMW3610
-    default y
-
 endif # SHIELD_NOMADBALL44_RIGHT
 
 if SHIELD_NOMADBALL44_LEFT || SHIELD_NOMADBALL44_RIGHT
