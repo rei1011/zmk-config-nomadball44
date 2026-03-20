@@ -12,20 +12,43 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
         };
+
+        hold_tap: hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            require-prior-idle-ms = <150>;
+        };
+
+        hold_tap_for_enter: hold_tap_for_enter {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP_FOR_ENTER";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-key-positions = <19 7 8 9 20 21>;
+        };
     };
 
     // Define a default keymap here.
     // See https://zmk.dev/docs/development/hardware-integration/new-shield#default-keymap.
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-                &kp N1 &kp N2 &kp N3 &kp N4 &kp N1 &kp N2 &kp N3 &kp N4 &kp N1 &kp N2 &kp N3 &kp N4
-                &kp A  &kp B  &kp C  &kp D  &kp A  &kp B  &kp C  &kp D  &kp A  &kp B  &kp C  &kp D
-                &kp N1 &kp N2 &kp N3 &kp N4 &kp N1 &kp N2 &kp N3 &kp N4 &kp N1 &kp N2 &kp N3 &kp N4
-                &kp A  &kp B  &kp C  &kp D  &kp A  &kp B  &kp C  &kp D  &kp A  &kp B  &kp C  &kp D
+&kp ESC  &kp N2  &kp N3  &kp N4  &kp N1  &kp N2    &kp N3  &kp N4  &kp N1  &kp N2  &kp N3  &kp N4
+&kp A    &kp B   &kp C   &kp D   &kp A   &kp B     &kp C   &kp D   &kp A   &kp B   &kp C   &kp D
+&kp N1   &kp N2  &kp N3  &kp N4  &kp N1  &kp N2    &kp N3  &kp N4  &kp N1  &kp N2  &kp N3  &kp N4
+&kp A    &kp B   &kp C   &kp D   &kp A             &kp B   &tog 0  &kp D
             >;
+
             sensor-bindings = <&enc_hor_scroll>;
         };
     };
