@@ -5,4 +5,8 @@ include:
  - board: seeeduino_xiao_ble
    shield: nomadball44_left rgbled_adapter
  - board: seeeduino_xiao_ble
+   shield: nomadball44_left rgbled_adapter
+   cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y -DCONFIG_ZMK_BATTERY_REPORTING=n
+   artifact-name: nomadball44_left_host_test
+ - board: seeeduino_xiao_ble
    shield: settings_reset
