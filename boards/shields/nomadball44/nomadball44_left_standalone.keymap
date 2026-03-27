@@ -1,0 +1,58 @@
+// 非 split 左手検証用（24 キー・sensor なし・LANG1 位置を Enter に差し替え）
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    behaviors {
+        hold_tap: hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            require-prior-idle-ms = <150>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+&kp LEFT_SHIFT  &kp Q     &kp W     &kp E     &kp R     &kp T
+&kp LEFT_SHIFT  &kp A     &kp S     &kp D     &kp F     &kp G
+&kp LEFT_SHIFT  &kp Z     &kp X     &kp C     &kp V     &kp B
+&kp LEFT_ALT    &kp LGUI  &hold_tap 1 LANG2  &hold_tap 2 SPACE  &kp ENTER  &none
+            >;
+        };
+
+        layer_1 {
+            bindings = <
+&kp TAB         &kp Q     &kp F2    &kp E     &kp R     &kp T
+&kp LCTRL       &kp A     &kp S     &kp D     &kp F     &kp G
+&kp LEFT_SHIFT  &kp Z     &kp X     &kp C     &kp V     &kp B
+&kp LEFT_ALT    &kp LGUI  &kp LANG2 &kp SPACE &kp ENTER &none
+            >;
+        };
+
+        layer_2 {
+            bindings = <
+&kp TAB         &kp N1    &kp N2    &kp N3    &kp N4    &kp N5
+&kp LCTRL       &kp A     &kp S     &kp D     &kp F     &kp G
+&kp LEFT_SHIFT  &kp Z     &kp X     &kp C     &kp V     &kp UNDERSCORE
+&kp LEFT_ALT    &kp LGUI  &kp LANG2 &kp SPACE &kp ENTER &none
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&kp ESC         &kp N1    &kp N2    &kp N3    &kp N4    &kp N5
+&kp LCTRL       &kp A     &kp S     &kp D     &kp F     &kp G
+&kp LEFT_SHIFT  &kp Z     &kp X     &kp C     &kp V     &kp B
+&kp LEFT_ALT    &kp LGUI  &kp LANG2 &kp SPACE &kp ENTER &none
+            >;
+        };
+    };
+};

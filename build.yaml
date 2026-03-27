@@ -11,4 +11,7 @@ include:
    shield: nomadball44_left_ble_host_test rgbled_adapter
    artifact-name: nomadball44_left_ble_host_test
  - board: seeeduino_xiao_ble
+   shield: nomadball44_left_standalone rgbled_adapter
+   artifact-name: nomadball44_left_standalone
+ - board: seeeduino_xiao_ble
    shield: settings_reset
