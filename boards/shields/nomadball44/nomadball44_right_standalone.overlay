@@ -22,3 +22,7 @@
 &encoder_right {
     status = "okay";
 };
+
+&keymap_sensors {
+    status = "okay";
+};
