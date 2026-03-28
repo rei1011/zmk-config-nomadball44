@@ -1,5 +1,5 @@
-// 非 split 右手検証用（24 キー + エンコーダ + トラックボール）
-// hold_tap_for_enter の hold-trigger は split 12 列向けのため、Enter は hold_tap を使用
+// 非 split 右手検証用: behaviors / sensor-bindings は config/nomadball44.keymap と同一
+// hold_tap_for_enter の hold-trigger は 6 列・24 キー配置向けに再指定
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -22,6 +22,18 @@
             tapping-term-ms = <150>;
             require-prior-idle-ms = <150>;
         };
+
+        /* 右手単体 transform: 行優先 0..23（Enter=19） */
+        hold_tap_for_enter: hold_tap_for_enter {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP_FOR_ENTER";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20>;
+        };
     };
 
     macros {
@@ -41,7 +53,7 @@
 &kp Y          &kp U     &kp I     &kp O     &kp P      &kp AT_SIGN
 &kp H          &hold_tap 3 J  &hold_tap 2 K  &kp L     &kp SEMI   &kp COLON
 &kp N          &kp M     &kp COMMA &kp PERIOD &kp SLASH  &kp RIGHT_SHIFT
-&kp BACKSPACE  &hold_tap 2 ENTER  &ctrl_up_arrow  &none  &none  &none
+&kp BACKSPACE  &hold_tap_for_enter 2 ENTER  &ctrl_up_arrow  &none  &none  &none
             >;
 
             sensor-bindings = <&enc_hor_scroll>;
