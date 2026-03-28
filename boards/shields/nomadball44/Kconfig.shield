@@ -12,3 +12,12 @@ config SHIELD_NOMADBALL44_LEFT_STANDALONE
 
 config SHIELD_NOMADBALL44_RIGHT
     def_bool $(shields_list_contains,nomadball44_right)
+
+config SHIELD_NOMADBALL44_RIGHT_HOST_TEST
+    def_bool $(shields_list_contains,nomadball44_right_host_test)
+
+config SHIELD_NOMADBALL44_RIGHT_BLE_HOST_TEST
+    def_bool $(shields_list_contains,nomadball44_right_ble_host_test)
+
+config SHIELD_NOMADBALL44_RIGHT_STANDALONE
+    def_bool $(shields_list_contains,nomadball44_right_standalone)

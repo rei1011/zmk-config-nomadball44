@@ -26,3 +26,6 @@ siblings:
   - nomadball44_left_ble_host_test
   - nomadball44_left_standalone
   - nomadball44_right
+  - nomadball44_right_host_test
+  - nomadball44_right_ble_host_test
+  - nomadball44_right_standalone
