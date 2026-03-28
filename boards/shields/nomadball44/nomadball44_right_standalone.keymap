@@ -56,7 +56,7 @@
 &kp BACKSPACE  &hold_tap_for_enter 2 ENTER  &ctrl_up_arrow  &none  &none  &none
             >;
 
-            sensor-bindings = <&enc_hor_scroll>;
+            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
         layer_1 {
