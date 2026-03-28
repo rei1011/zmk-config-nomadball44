@@ -18,3 +18,7 @@
 &default_layout {
     transform = <&right_standalone_transform>;
 };
+
+&encoder_right {
+    status = "okay";
+};
