@@ -1,1 +1,14 @@
+/*
+ * USB ホスト検証用: 量産右手と同じ EC11 / PMW3610 を使う。
+ * 他シールド・ボードのフラグメントとマージしてもエンコーダと
+ * keymap-sensors が無効化されないよう明示する。
+ */
 #include "nomadball44_right.overlay"
+
+&encoder_right {
+    status = "okay";
+};
+
+&keymap_sensors {
+    status = "okay";
+};
