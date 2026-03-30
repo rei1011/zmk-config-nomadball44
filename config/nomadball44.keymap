@@ -58,7 +58,7 @@
 &kp LEFT_ALT    &kp LGUI  &hold_tap 1 LANG2  &hold_tap 2 SPACE  &hold_tap 3 LANG1           &kp BACKSPACE  &hold_tap_for_enter 2 ENTER  &ctrl_up_arrow
             >;
 
-            sensor-bindings = <&enc_hor_scroll>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         layer_1 {
