@@ -11,7 +11,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-            tap-ms = <40>;
+            tap-ms = <5>;
         };
 
         hold_tap: hold_tap {
