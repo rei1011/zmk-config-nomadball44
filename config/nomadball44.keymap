@@ -8,9 +8,11 @@
 / {
     behaviors {
         enc_hor_scroll: enc_hor_scroll {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
+
+            tap-ms = <20>;
         };
 
         hold_tap: hold_tap {
@@ -58,7 +60,7 @@
 &kp LEFT_ALT    &kp LGUI  &hold_tap 1 LANG2  &hold_tap 2 SPACE  &hold_tap 3 LANG1           &kp BACKSPACE  &hold_tap_for_enter 2 ENTER  &ctrl_up_arrow
             >;
 
-            sensor-bindings = <&enc_hor_scroll>;
+            sensor-bindings = <&enc_hor_scroll SCRL_UP SCRL_DOWN>;
         };
 
         layer_1 {
@@ -69,7 +71,7 @@
 &kp LEFT_ALT    &kp LGUI  &kp LANG2  &kp SPACE  &kp LANG1           &kp BACKSPACE  &kp ENTER  &ctrl_up_arrow
             >;
 
-            sensor-bindings = <&enc_hor_scroll>;
+            sensor-bindings = <&enc_hor_scroll SCRL_UP SCRL_DOWN>;
         };
 
         layer_2 {
@@ -80,7 +82,7 @@
 &kp LEFT_ALT    &kp LGUI  &kp LANG2  &kp SPACE  &kp LANG1                    &kp BACKSPACE  &kp ENTER  &ctrl_up_arrow
             >;
 
-            sensor-bindings = <&enc_hor_scroll>;
+            sensor-bindings = <&enc_hor_scroll SCRL_UP SCRL_DOWN>;
         };
 
         layer_3 {
@@ -91,7 +93,7 @@
 &kp LEFT_ALT    &kp LGUI  &kp LANG2  &kp SPACE  &kp LANG1            &kp BACKSPACE  &kp ENTER  &ctrl_up_arrow
             >;
 
-            sensor-bindings = <&enc_hor_scroll>;
+            sensor-bindings = <&enc_hor_scroll SCRL_UP SCRL_DOWN>;
         };
     };
 };
