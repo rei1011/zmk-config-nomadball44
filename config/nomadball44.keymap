@@ -102,10 +102,10 @@
 
         layer_2 {
             bindings = <
-&kp T              &kp R              &kp E              &kp W     &kp Q         &kp TAB       &kp Y          &kp U                        &kp I           &kp O       &kp P      &kp AT_SIGN
-&kp G              &kp F              &kp D              &kp S     &kp A         &kp LCTRL     &kp H          &hold_tap 3 J                &hold_tap 2 K   &kp L       &kp SEMI   &kp COLON
-&kp B              &kp V              &kp C              &kp X     &kp Z         &kp LSHIFT    &kp N          &kp M                        &kp COMMA       &kp PERIOD  &kp SLASH  &kp RIGHT_SHIFT
-&hold_tap 3 LANG1  &hold_tap 2 SPACE  &hold_tap 1 LANG2  &kp LGUI  &kp LEFT_ALT                &kp BACKSPACE  &hold_tap_for_enter 2 ENTER  &ctrl_up_arrow
+&kp NUMBER_5    &kp NUMBER_4  &kp NUMBER_3  &kp NUMBER_2  &kp NUMBER_1  &kp TAB       &kp UNDERSCORE  &kp LEFT   &kp UP_ARROW    &kp RIGHT_ARROW  &none      &kp LEFT_BRACKET
+&kp G           &kp F         &kp D         &kp S         &kp A         &kp LCTRL     &none           &mkp LCLK  &kp DOWN_ARROW  &mkp RCLK        &mkp MB3   &kp RIGHT_BRACKET
+&kp UNDERSCORE  &kp V         &kp C         &kp X         &kp Z         &kp LSHIFT    &kp MINUS       &kp SPACE  &kp COMMA       &kp PERIOD       &kp SLASH  &kp RIGHT_SHIFT
+&kp LANG1       &kp SPACE     &kp LANG2     &kp LGUI      &kp LEFT_ALT                &kp BACKSPACE   &kp ENTER  &ctrl_up_arrow
             >;
 
             sensor-bindings = <&enc_hor_scroll>;
