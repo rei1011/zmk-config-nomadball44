@@ -102,9 +102,9 @@
 
         layer_2 {
             bindings = <
-&kp NUMBER_5       &kp NUMBER_4  &kp NUMBER_3  &kp NUMBER_2  &kp NUMBER_1  &kp TAB       &kp UNDERSCORE  &kp LEFT   &kp UP_ARROW    &kp RIGHT_ARROW  &none      &kp JP_LBRACKET
+&kp NUMBER_5       &kp NUMBER_4  &kp NUMBER_3  &kp NUMBER_2  &kp NUMBER_1  &kp TAB       &kp JP_UNDERSCORE  &kp LEFT   &kp UP_ARROW    &kp RIGHT_ARROW  &none      &kp JP_LBRACKET
 &kp G              &kp F         &kp D         &kp S         &kp A         &kp LCTRL     &none              &mkp LCLK  &kp DOWN_ARROW  &mkp RCLK        &mkp MB3   &kp JP_RBRACKET
-&kp UNDERSCORE  &kp V         &kp C         &kp X         &kp Z         &kp LSHIFT    &kp MINUS          &kp SPACE  &kp COMMA       &kp PERIOD       &kp SLASH  &kp RIGHT_SHIFT
+&kp JP_UNDERSCORE  &kp V         &kp C         &kp X         &kp Z         &kp LSHIFT    &kp MINUS          &kp SPACE  &kp COMMA       &kp PERIOD       &kp SLASH  &kp RIGHT_SHIFT
 &kp LANG1          &kp SPACE     &kp LANG2     &kp LGUI      &kp LEFT_ALT                &kp BACKSPACE      &kp ENTER  &ctrl_up_arrow
             >;
 
