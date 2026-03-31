@@ -19,7 +19,8 @@
 #define JP_ASTERISK     DOUBLE_QUOTES     // *
 #define JP_BACKQUOTE    LEFT_BRACE        // `
 #define JP_BSLH         INT1              // (backslash)
-#define JP_UNDER        LS(JP_BSLH)       // _
+/* Mac 日本語キーボード: LS(INT1) は Shift+マイナス扱いになりやすい。ろは修飾なし INT1 */
+#define JP_UNDER        JP_BSLH           // ろ（INT1、JP_BSLH と同じスキャンコード）
 #define JP_LBRACKET     RIGHT_BRACKET     // [
 #define JP_RBRACKET     BACKSLASH         // ]
 #define JP_LPAREN       ASTERISK          // (
