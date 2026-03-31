@@ -113,7 +113,7 @@
 
         layer_3 {
             bindings = <
-&kp NUMBER_5  &kp NUMBER_4  &kp NUMBER_3  &kp NUMBER_2  &kp NUMBER_1  &kp ESC       &kp NUMBER_6   &kp NUMBER_7  &kp NUMBER_8    &kp NUMBER_9       &kp NUMBER_0     &kp JP_PIPE
+&kp NUMBER_5  &kp NUMBER_4  &kp NUMBER_3  &kp NUMBER_2  &kp NUMBER_1  &kp ESC       &kp NUMBER_6   &kp NUMBER_7  &kp NUMBER_8    &kp NUMBER_9       &kp NUMBER_0     &kp JP_YEN
 &kp G         &kp F         &kp D         &kp S         &kp A         &kp LCTRL     &kp H          &kp J         &kp K           &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp JP_COLON
 &kp B         &kp V         &kp C         &kp X         &kp Z         &kp LSHIFT    &kp MINUS      &kp M         &kp COMMA       &kp PERIOD         &kp SLASH        &kp RIGHT_SHIFT
 &kp LANG1     &kp SPACE     &kp LANG2     &kp LGUI      &kp LEFT_ALT                &kp BACKSPACE  &kp ENTER     &ctrl_up_arrow
