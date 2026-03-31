@@ -51,7 +51,7 @@
         /* force-awake-4ms-mode; */  /* USB接続で250Hzが必要な場合 */
         // swap-xy;   /* センサー向きに応じて */
         // invert-x;
-        // invert-y;
+        invert-y;
     };
 };
 
