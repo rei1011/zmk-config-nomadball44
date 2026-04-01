@@ -19,7 +19,9 @@
 #define JP_ASTERISK     DOUBLE_QUOTES     // *
 #define JP_BACKQUOTE    LEFT_BRACE        // `
 #define JP_BSLH         INT1              // (backslash)
+
 /* Mac 日本語キーボード: LS(INT1) は Shift+マイナス扱いになりやすい。ろは修飾なし INT1 */
+
 #define JP_UNDER        JP_BSLH           // ろ（INT1、JP_BSLH と同じスキャンコード）
 #define JP_LBRACKET     RIGHT_BRACKET     // [
 #define JP_RBRACKET     BACKSLASH         // ]
@@ -32,6 +34,7 @@
 #define JP_HANZEN       GRAVE             // 半角/全角
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
@@ -93,10 +96,10 @@
 
         layer_1 {
             bindings = <
-&kp T      &kp R      &kp E      &kp F2    &kp Q         &kp TAB       &kp F6         &kp U      &kp I           &kp O       &kp F12    &kp JP_CARET
-&kp G      &kp F      &kp D      &kp S     &kp A         &kp LCTRL     &kp H          &kp J      &kp K           &kp L       &kp SEMI   &kp JP_COLON
-&kp B      &kp V      &kp C      &kp X     &kp Z         &kp LSHIFT    &kp N          &kp M      &kp COMMA       &kp PERIOD  &kp SLASH  &kp RIGHT_SHIFT
-&kp LANG1  &kp SPACE  &kp LANG2  &kp LGUI  &kp LEFT_ALT                &kp BACKSPACE  &kp ENTER  &ctrl_up_arrow
+&kp T      &kp R      &kp E      &kp F2    &bt BT_SEL 1  &bt BT_SEL 0    &kp F6         &kp U      &kp I           &kp O       &kp F12    &kp JP_CARET
+&kp G      &kp F      &kp D      &kp S     &kp A         &kp LCTRL       &kp H          &kp J      &kp K           &kp L       &kp SEMI   &kp JP_COLON
+&kp B      &kp V      &kp C      &kp X     &kp Z         &kp LSHIFT      &kp N          &kp M      &kp COMMA       &kp PERIOD  &kp SLASH  &kp RIGHT_SHIFT
+&kp LANG1  &kp SPACE  &kp LANG2  &kp LGUI  &kp LEFT_ALT                  &kp BACKSPACE  &kp ENTER  &ctrl_up_arrow
             >;
 
             sensor-bindings = <&enc_hor_scroll>;
@@ -104,10 +107,10 @@
 
         layer_2 {
             bindings = <
-&kp NUMBER_5       &kp NUMBER_4  &kp NUMBER_3  &kp NUMBER_2  &kp NUMBER_1  &kp TAB       &kp JP_UNDER  &kp LEFT   &kp UP_ARROW    &kp RIGHT_ARROW  &none      &kp JP_LBRACKET
-&kp G              &kp F         &kp D         &kp S         &kp A         &kp LCTRL     &none              &mkp LCLK  &kp DOWN_ARROW  &mkp RCLK        &mkp MB3   &kp JP_RBRACKET
-&kp JP_UNDER       &kp V         &kp C         &kp X         &kp Z         &kp LSHIFT    &kp MINUS          &kp SPACE  &kp COMMA       &kp PERIOD       &kp SLASH  &kp RIGHT_SHIFT
-&kp LANG1          &kp SPACE     &kp LANG2     &kp LGUI      &kp LEFT_ALT                &kp BACKSPACE      &kp ENTER  &ctrl_up_arrow
+&kp NUMBER_5  &kp NUMBER_4  &kp NUMBER_3  &kp NUMBER_2  &kp NUMBER_1  &kp TAB       &kp JP_UNDER   &kp LEFT   &kp UP_ARROW    &kp RIGHT_ARROW  &none      &kp JP_LBRACKET
+&kp G         &kp F         &kp D         &kp S         &kp A         &kp LCTRL     &none          &mkp LCLK  &kp DOWN_ARROW  &mkp RCLK        &mkp MB3   &kp JP_RBRACKET
+&kp JP_UNDER  &kp V         &kp C         &kp X         &kp Z         &kp LSHIFT    &kp MINUS      &kp SPACE  &kp COMMA       &kp PERIOD       &kp SLASH  &kp RIGHT_SHIFT
+&kp LANG1     &kp SPACE     &kp LANG2     &kp LGUI      &kp LEFT_ALT                &kp BACKSPACE  &kp ENTER  &ctrl_up_arrow
             >;
 
             sensor-bindings = <&enc_hor_scroll>;
