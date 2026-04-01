@@ -66,15 +66,6 @@
     // Define a default keymap here.
     // See https://zmk.dev/docs/development/hardware-integration/new-shield#default-keymap.
 
-    macros {
-        ctrl_up_arrow: ctrl_up_arrow {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp UP_ARROW>;
-            label = "CTRL_UP_ARROW";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -83,7 +74,7 @@
 &kp TAB         &kp Q     &kp W              &kp E              &kp R              &kp T    &kp Y          &kp U                        &kp I           &kp O       &kp P      &kp AT_SIGN
 &kp LCTRL       &kp A     &kp S              &kp D              &kp F              &kp G    &kp H          &hold_tap 3 J                &hold_tap 2 K   &kp L       &kp SEMI   &kp COLON
 &kp LEFT_SHIFT  &kp Z     &kp X              &kp C              &kp V              &kp B    &kp N          &kp M                        &kp COMMA       &kp PERIOD  &kp SLASH  &kp RIGHT_SHIFT
-&kp LEFT_ALT    &kp LGUI  &hold_tap 1 LANG2  &hold_tap 2 SPACE  &hold_tap 3 LANG1           &kp BACKSPACE  &hold_tap_for_enter 2 ENTER  &ctrl_up_arrow
+&kp LEFT_ALT    &kp LGUI  &hold_tap 1 LANG2  &hold_tap 2 SPACE  &hold_tap 3 LANG1           &kp BACKSPACE  &hold_tap_for_enter 2 ENTER  &kp LC(UP_ARROW)
             >;
 
             sensor-bindings = <&enc_hor_scroll>;
@@ -94,7 +85,7 @@
 &kp TAB         &kp Q     &kp F2     &kp E      &kp R      &kp T    &kp F6         &kp U      &kp I           &kp O       &kp F12    &kp CARET
 &kp LCTRL       &kp A     &kp S      &kp D      &kp F      &kp G    &kp H          &kp J      &kp K           &kp L       &kp SEMI   &kp COLON
 &kp LEFT_SHIFT  &kp Z     &kp X      &kp C      &kp V      &kp B    &kp N          &kp M      &kp COMMA       &kp PERIOD  &kp SLASH  &kp RIGHT_SHIFT
-&kp LEFT_ALT    &kp LGUI  &kp LANG2  &kp SPACE  &kp LANG1           &kp BACKSPACE  &kp ENTER  &ctrl_up_arrow
+&kp LEFT_ALT    &kp LGUI  &kp LANG2  &kp SPACE  &kp LANG1           &kp BACKSPACE  &kp ENTER  &kp LC(UP_ARROW)
             >;
 
             sensor-bindings = <&enc_hor_scroll>;
@@ -105,7 +96,7 @@
 &kp TAB         &kp N1    &kp N2     &kp N3     &kp N4     &kp N5            &kp UNDER      &kp LEFT   &kp UP_ARROW    &kp RIGHT   &none      &kp LBKT
 &kp LCTRL       &kp A     &kp S      &kp D      &kp F      &kp G             &none          &mkp LCLK  &kp DOWN_ARROW  &mkp RCLK   &mkp MB3   &kp RBKT
 &kp LEFT_SHIFT  &kp Z     &kp X      &kp C      &kp V      &kp UNDERSCORE    &kp MINUS      &kp SPACE  &kp COMMA       &kp PERIOD  &kp SLASH  &kp RIGHT_SHIFT
-&kp LEFT_ALT    &kp LGUI  &kp LANG2  &kp SPACE  &kp LANG1                    &kp BACKSPACE  &kp ENTER  &ctrl_up_arrow
+&kp LEFT_ALT    &kp LGUI  &kp LANG2  &kp SPACE  &kp LANG1                    &kp BACKSPACE  &kp ENTER  &kp LC(UP_ARROW)
             >;
 
             sensor-bindings = <&enc_hor_scroll>;
@@ -116,7 +107,7 @@
 &kp ESC         &kp N1    &kp N2     &kp N3     &kp N4     &kp N5    &kp N6         &kp N7     &kp N8          &kp N9        &kp N0        &kp PIPE
 &kp LCTRL       &kp A     &kp S      &kp D      &kp F      &kp G     &kp H          &kp J      &kp K           &kp C_VOL_DN  &kp C_VOL_UP  &kp COLON
 &kp LEFT_SHIFT  &kp Z     &kp X      &kp C      &kp V      &kp B     &kp MINUS      &kp M      &kp COMMA       &kp PERIOD    &kp SLASH     &kp RIGHT_SHIFT
-&kp LEFT_ALT    &kp LGUI  &kp LANG2  &kp SPACE  &kp LANG1            &kp BACKSPACE  &kp ENTER  &ctrl_up_arrow
+&kp LEFT_ALT    &kp LGUI  &kp LANG2  &kp SPACE  &kp LANG1            &kp BACKSPACE  &kp ENTER  &kp LC(UP_ARROW)
             >;
 
             sensor-bindings = <&enc_hor_scroll>;
