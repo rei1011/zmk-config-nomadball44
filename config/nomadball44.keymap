@@ -63,7 +63,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            hold-trigger-key-positions = <19 7 8 9 20 21 30 6 31 11 23 22 29>;
+            hold-trigger-key-positions = <19 7 8 9 20 21 30 6 31 11 23 22 29 37 24 12 4>;
             hold-while-undecided;
         };
 
