@@ -88,9 +88,9 @@
 
         default_layer {
             bindings = <
-&kp TAB         &kp Q     &kp W              &kp E              &kp R              &kp T    &kp Y          &kp U                        &kp I             &kp O       &kp P      &kp JP_AT
-&kp LCTRL       &kp A     &kp S              &kp D              &kp F              &kp G    &kp H          &hold_tap 3 J                &hold_tap 2 K     &kp L       &kp SEMI   &kp JP_COLON
-&kp LEFT_SHIFT  &kp Z     &kp X              &kp C              &kp V              &kp B    &kp N          &kp M                        &kp COMMA         &kp PERIOD  &kp SLASH  &kp RIGHT_SHIFT
+&kp TAB         &kp Q     &kp W              &kp E              &kp R              &kp T    &kp Y          &kp U                        &kp I                        &kp O       &kp P      &kp JP_AT
+&kp LCTRL       &kp A     &kp S              &kp D              &kp F              &kp G    &kp H          &hold_tap 3 J                &hold_tap_tap_preferred 2 K  &kp L       &kp SEMI   &kp JP_COLON
+&kp LEFT_SHIFT  &kp Z     &kp X              &kp C              &kp V              &kp B    &kp N          &kp M                        &kp COMMA                    &kp PERIOD  &kp SLASH  &kp RIGHT_SHIFT
 &kp LEFT_ALT    &kp LGUI  &hold_tap 1 LANG2  &hold_tap 2 SPACE  &hold_tap 3 LANG1           &kp BACKSPACE  &hold_tap_for_enter 2 ENTER  &kp LC(UP_ARROW)
             >;
 
@@ -99,10 +99,10 @@
 
         layer_1 {
             bindings = <
-&bt BT_SEL 0    &bt BT_SEL 1     &kp F2     &kp E      &kp R      &kp T    &kp F6         &kp U      &kp I             &kp O       &kp F12    &kp JP_CARET
-&kp LCTRL       &kp A     &kp S      &kp D      &kp F      &kp G    &kp H          &kp J      &kp K             &kp L       &kp SEMI   &kp JP_COLON
-&kp LEFT_SHIFT  &kp Z     &kp X      &kp C      &kp V      &kp B    &kp N          &kp M      &kp COMMA         &kp PERIOD  &kp SLASH  &kp RIGHT_SHIFT
-&kp LEFT_ALT    &kp LGUI  &kp LANG2  &kp SPACE  &kp LANG1           &kp BACKSPACE  &kp ENTER  &kp LC(UP_ARROW)
+&bt BT_SEL 0    &bt BT_SEL 1  &kp F2     &kp E      &kp R      &kp T    &kp F6         &kp U      &kp I             &kp O       &kp F12    &kp JP_CARET
+&kp LCTRL       &kp A         &kp S      &kp D      &kp F      &kp G    &kp H          &kp J      &kp K             &kp L       &kp SEMI   &kp JP_COLON
+&kp LEFT_SHIFT  &kp Z         &kp X      &kp C      &kp V      &kp B    &kp N          &kp M      &kp COMMA         &kp PERIOD  &kp SLASH  &kp RIGHT_SHIFT
+&kp LEFT_ALT    &kp LGUI      &kp LANG2  &kp SPACE  &kp LANG1           &kp BACKSPACE  &kp ENTER  &kp LC(UP_ARROW)
             >;
 
             sensor-bindings = <&enc_vol>;
@@ -110,10 +110,10 @@
 
         layer_2 {
             bindings = <
-&kp TAB         &kp N1    &kp N2     &kp N3     &kp N4     &kp N5            &kp JP_UNDER      &kp LEFT   &kp UP_ARROW      &kp RIGHT   &none      &kp JP_LBRACKET
-&kp LCTRL       &kp A     &kp S      &kp D      &kp F      &kp G             &none          &mkp LCLK  &kp DOWN_ARROW    &mkp RCLK   &mkp MB3   &kp JP_RBRACKET
+&kp TAB         &kp N1    &kp N2     &kp N3     &kp N4     &kp N5          &kp JP_UNDER   &kp LEFT   &kp UP_ARROW      &kp RIGHT   &none      &kp JP_LBRACKET
+&kp LCTRL       &kp A     &kp S      &kp D      &kp F      &kp G           &none          &mkp LCLK  &kp DOWN_ARROW    &mkp RCLK   &mkp MB3   &kp JP_RBRACKET
 &kp LEFT_SHIFT  &kp Z     &kp X      &kp C      &kp V      &kp JP_UNDER    &kp MINUS      &kp SPACE  &kp COMMA         &kp PERIOD  &kp SLASH  &kp RIGHT_SHIFT
-&kp LEFT_ALT    &kp LGUI  &kp LANG2  &kp SPACE  &kp LANG1                    &kp BACKSPACE  &kp ENTER  &kp LC(UP_ARROW)
+&kp LEFT_ALT    &kp LGUI  &kp LANG2  &kp SPACE  &kp LANG1                  &kp BACKSPACE  &kp ENTER  &kp LC(UP_ARROW)
             >;
 
             sensor-bindings = <&enc_vol>;
