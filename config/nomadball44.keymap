@@ -43,7 +43,7 @@
         enc_vol: enc_vol {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
+            bindings = <&kp C_VOL_DN>, <&kp C_VOL_UP>;
         };
 
         hold_tap: hold_tap {
