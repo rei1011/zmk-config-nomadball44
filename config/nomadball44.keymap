@@ -40,10 +40,10 @@
 
 / {
     behaviors {
-        enc_hor_scroll: enc_hor_scroll {
+        enc_vol: enc_vol {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
+            bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
         };
 
         hold_tap: hold_tap {
@@ -94,7 +94,7 @@
 &kp LEFT_ALT    &kp LGUI  &hold_tap 1 LANG2  &hold_tap 2 SPACE  &hold_tap 3 LANG1           &kp BACKSPACE  &hold_tap_for_enter 2 ENTER  &kp LC(UP_ARROW)
             >;
 
-            sensor-bindings = <&enc_hor_scroll>;
+            sensor-bindings = <&enc_vol>;
         };
 
         layer_1 {
@@ -105,7 +105,7 @@
 &kp LEFT_ALT    &kp LGUI  &kp LANG2  &kp SPACE  &kp LANG1           &kp BACKSPACE  &kp ENTER  &kp LC(UP_ARROW)
             >;
 
-            sensor-bindings = <&enc_hor_scroll>;
+            sensor-bindings = <&enc_vol>;
         };
 
         layer_2 {
@@ -116,7 +116,7 @@
 &kp LEFT_ALT    &kp LGUI  &kp LANG2  &kp SPACE  &kp LANG1                    &kp BACKSPACE  &kp ENTER  &kp LC(UP_ARROW)
             >;
 
-            sensor-bindings = <&enc_hor_scroll>;
+            sensor-bindings = <&enc_vol>;
         };
 
         layer_3 {
@@ -127,7 +127,7 @@
 &kp LEFT_ALT    &kp LGUI  &kp LANG2  &kp SPACE  &kp LANG1            &kp BACKSPACE  &kp ENTER  &kp LC(UP_ARROW)
             >;
 
-            sensor-bindings = <&enc_hor_scroll>;
+            sensor-bindings = <&enc_vol>;
         };
     };
 };
